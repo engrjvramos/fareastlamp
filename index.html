@@ -16,13 +16,94 @@
 
 <body>
   <header>
-    
+    <div class="container">
+      <!--======= LOGO =======-->
+      <div class="logo">
+        <a href="./index.html">
+          <img src="./images/logo.png" alt="">
+        </a>
+      </div>
+
+      <!--======= NAV TOGGLE =======-->
+      <div aria-controls="primary-navigation" aria-expanded="false" class="mobile-nav-toggle">
+        <span class="sr-only">Menu</span>
+        <div class="hamburger"></div>
+      </div>
+
+      <div class="navigation-container">
+        <!--======= UPPER MENU =======-->
+        <div class="upper-menu">
+          <div class="search">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </div>
+          <div class="cart">
+            <i class="fa-solid fa-cart-shopping"></i>
+          </div>
+          <div class="language english-toggle active">EN</div>
+          <div class="language chinese-toggle">中</div>
+        </div>
+
+        <!--======= PRIMARY NAVIGATION =======-->
+        <nav id="primary-navigation" class="primary-navigation" data-visible="false">
+          <ul class="nav-items">
+            <li >
+              <a href="./index.html" class="active">Home</a>
+            </li>
+            <li>
+              <a href="#0">
+                About Us 
+                <i class="fa-solid fa-angle-down"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#0">
+                Products 
+                <i class="fa-solid fa-angle-down"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#0">Engineering Applications</a>
+            </li>
+            <li>
+              <a href="#0">News</a>
+            </li>
+            <li>
+              <a href="#0">Contact Us</a>
+            </li>
+            <li>
+              <a href="#0">Download</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
       
-    
+    </div>
+    <!--======= OVERLAY =======-->
+    <div data-visible="false" class="nav-overlay"></div>
+      
   </header>
 
   <main>
-   
+   <section class="banner">
+     <div class="slider">
+       <div class="slide">
+         <img src="./images/birds-nest.jpg" alt="" class="banner-image">
+         <img src="./images/banner-title-1.png" alt="" class="banner-title">
+        </div>
+       <div class="slide">
+         <img src="./images/metro-line.jpg" alt="" class="banner-image">
+         <img src="./images/banner-title-2.png" alt="" class="banner-title">
+       </div>
+       <div class="slide">
+         <img src="./images/hangzhou-bridge.jpg" alt="" class="banner-image">
+         <img src="./images/banner-title-3.png" alt="" class="banner-title">
+       </div>
+
+       <div class="indicators"></div>
+     </div>
+  
+     
+   </section>
 
   </main>
 
