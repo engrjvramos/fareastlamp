@@ -93,3 +93,14 @@ indicatorContainer.addEventListener('click', (e) => {
     activateIndicator(slide);
   }
 });
+
+const productSlides = document.querySelectorAll('.products-slide');
+// const btnLeft = document.querySelector('.slider__btn--left');
+// const btnRight = document.querySelector('.slider__btn--right');
+const goToSlide2 = (s) => {
+  productSlides.forEach((slide, index) => {
+    slide.style.transform = `translateX(${100 * (index - s)}%)`;
+  });
+};
+
+goToSlide2(0);

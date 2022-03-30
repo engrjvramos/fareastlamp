@@ -1,8 +1,9 @@
 .banner {
   .slider {
     position: relative;
-    width: 100%;
     height: 80vh;
+
+    width: 100%;
     overflow: hidden;
   }
 
@@ -10,7 +11,6 @@
     position: absolute;
     top: 0;
     width: 100%;
-
     transition: transform 600ms;
 
     .banner-title {
@@ -31,7 +31,7 @@
   .slide > img {
     /* Only for images that have different size than slide */
     width: 100%;
-    height: 100%;
+    // height: 100%;
   }
 
   .indicators {
@@ -58,5 +58,129 @@
     /* background-color: #fff; */
     background-color: #ffc23b;
     opacity: 1;
+  }
+}
+
+.about {
+  background-color: #3e3689;
+  color: #fff;
+  padding-block: 6rem;
+
+  .section-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+    position: relative;
+
+    h1 {
+      font-size: 4.2rem;
+      line-height: 1.25;
+      text-align: center;
+      text-transform: capitalize;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 14rem;
+      height: 5px;
+      top: 110%;
+      background-color: #efae1c;
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+    }
+  }
+
+  .section-content {
+    .description {
+      text-align: center;
+      font-size: 1.75rem;
+      line-height: 1.8;
+      margin-bottom: 4rem;
+
+      p:first-of-type {
+        margin-bottom: 2.5rem;
+      }
+    }
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      padding-inline: 10rem;
+      column-gap: 3rem;
+      margin-bottom: 5rem;
+
+      .box {
+        width: 100%;
+        height: 25rem;
+        border: 1px solid #9386b5;
+        text-align: center;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-items: center;
+        cursor: pointer;
+        transition: transform 500ms ease;
+
+        &:hover {
+          transform: translateY(-10px);
+        }
+      }
+
+      .box-image {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+          height: 12rem;
+        }
+      }
+    }
+
+    .certifications {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      img {
+        height: 9rem;
+      }
+    }
+  }
+}
+
+.products {
+  .products-slider {
+    position: relative;
+    width: 100%;
+    // overflow: hidden;
+  }
+
+  .products-slide {
+    position: absolute;
+    top: 0;
+    transition: transform 600ms;
+    cursor: pointer;
+
+    img {
+      display: block;
+      width: 45rem;
+      margin-bottom: 0.5rem;
+    }
+
+    h2 {
+      text-align: center;
+      text-transform: uppercase;
+      font-size: 2rem;
+      font-weight: 400;
+      line-height: 2;
+      color: #fff;
+      background-color: #3e3689;
+      box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
+      max-width: 45rem;
+      padding: 1rem;
+    }
   }
 }
