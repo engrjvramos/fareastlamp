@@ -3,17 +3,20 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  padding-inline: 4rem;
+  padding-inline: 3.5rem;
   background-color: transparent;
   z-index: 100;
 
-  @include respond(mobile) {
-    padding-block: 3.45rem;
-    padding-inline: 2.4rem;
+  @include respond(bp-1200) {
+    padding-inline: 3rem;
+  }
+
+  @include respond(tab-port) {
+    padding-inline: 1.5rem;
   }
 
   @include respond(mobileXS) {
-    padding-inline: 1.2rem;
+    padding-inline: 1rem;
   }
 
   .container {
@@ -21,17 +24,42 @@ header {
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    height: 16rem;
+    height: 14rem;
+    padding-inline-start: 3rem;
+
+    @include respond(bp-1200) {
+      height: 13rem;
+    }
+
+    @include respond(tab-land) {
+      height: 11rem;
+    }
+
+    @include respond(tab-port-reg) {
+      height: 10rem;
+    }
 
     .logo {
-      width: 25rem;
+      width: 20rem;
       height: 100%;
       position: relative;
+
+      @include respond(bp-1200) {
+        width: 18rem;
+      }
+
+      @include respond(tab-land) {
+        width: 14rem;
+      }
+
+      @include respond(tab-port-reg) {
+        width: 12rem;
+      }
 
       img {
         width: 100%;
         position: absolute;
-        top: 55%;
+        top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
       }
@@ -51,15 +79,15 @@ header {
       z-index: 9999;
       cursor: pointer;
 
-      @include respond(mobile) {
+      @include respond(tab-port-reg) {
         display: flex;
       }
 
       .hamburger {
         width: 100%;
-        height: 4px;
+        height: 2px;
         position: relative;
-        background-color: var(--clr-black);
+        background-color: #ffc23b;
         transition: transform 0.3s ease, background-color 0.3s ease;
 
         &::before,
@@ -68,17 +96,17 @@ header {
           position: absolute;
           left: 0;
           width: 100%;
-          height: 4px;
-          background-color: var(--clr-black);
+          height: 2px;
+          background-color: #ffc23b;
           transition: transform 0.3s ease;
         }
 
         &::before {
-          transform: translateY(-0.8rem);
+          transform: translateY(-0.7rem);
         }
 
         &::after {
-          transform: translateY(0.8rem);
+          transform: translateY(0.7rem);
         }
       }
 
@@ -99,16 +127,22 @@ header {
       }
     }
 
+    .navigation-container {
+      @include respond(tab-port-reg) {
+        display: none;
+      }
+    }
+
     .upper-menu {
       display: flex;
       align-items: center;
       justify-content: flex-end;
-      column-gap: 2rem;
-      margin-bottom: 2rem;
+      column-gap: 1.5rem;
+      margin-bottom: 1rem;
 
       div {
-        width: 3.4rem;
-        height: 3.4rem;
+        width: 2.5rem;
+        height: 2.5rem;
         cursor: pointer;
 
         &:hover {
@@ -120,7 +154,7 @@ header {
         i {
           width: 100%;
           height: 100%;
-          font-size: 2.5rem;
+          font-size: 2rem;
           color: #fff;
           display: flex;
           align-items: center;
@@ -136,6 +170,7 @@ header {
         border-radius: 50%;
         color: #fff;
         font-weight: 500;
+        font-size: 1.4rem;
         transition: background-color 250ms ease;
 
         &:hover,
@@ -160,25 +195,20 @@ header {
         z-index: 1000;
       }
 
-      @include respond(mobile) {
-        display: block;
-        position: fixed;
-        background-color: var(--clr-black);
-        color: var(--clr-white);
-        top: 9.6rem;
-        left: 0;
-        width: 100%;
-        transform: translateY(-100%);
-        visibility: hidden;
-        opacity: 0;
-      }
-
       ul {
         display: flex;
         align-items: center;
-        column-gap: 3.4rem;
+        column-gap: 2rem;
         text-transform: uppercase;
         height: 100%;
+
+        @include respond(bp-1200) {
+          column-gap: 6px;
+        }
+
+        @include respond(tab-land) {
+          column-gap: 0;
+        }
 
         @include respond(mobile) {
           padding-block: 4.8rem;
@@ -189,9 +219,16 @@ header {
         }
 
         li {
-          font-size: 1.8rem;
+          font-size: 1.5rem;
           line-height: 1.4rem;
-          letter-spacing: 1px;
+
+          @include respond(tab-land) {
+            font-size: 1.3rem;
+
+            &:first-of-type {
+              display: none;
+            }
+          }
 
           @include respond(mobile) {
             width: 100%;
@@ -202,21 +239,30 @@ header {
 
           a {
             display: inline-block;
-            padding-bottom: 1rem;
+            padding: 8px 5px;
+
             color: #fff;
-            border-bottom: 4px solid transparent;
+            border-bottom: 3px solid transparent;
             transition: border-bottom 250ms ease-in-out;
 
             &:hover {
-              border-bottom: 4px solid #ffc23b;
+              border-bottom: 3px solid #ffc23b;
             }
 
             &.active {
-              border-bottom: 4px solid #ffc23b;
+              border-bottom: 3px solid #ffc23b;
             }
 
             @include respond(mobile) {
               color: var(--clr-white);
+            }
+          }
+
+          i {
+            margin-left: 3px;
+
+            @include respond(tab-land) {
+              font-size: 1.1rem;
             }
           }
         }

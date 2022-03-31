@@ -12,6 +12,7 @@
 
 .section {
   margin-block-end: 16rem;
+  padding-inline: 2.5rem;
 
   @include respond(tab-port) {
     margin-block-end: 12rem;
@@ -19,6 +20,6 @@
 }
 
 .container {
-  max-width: 150rem;
+  max-width: 124rem;
   margin: 0 auto;
 }

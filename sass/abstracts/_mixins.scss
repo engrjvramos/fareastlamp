@@ -29,6 +29,12 @@
     }
   }
 
+  @if $breakpoint == tab-port-reg {
+    @media only screen and (max-width: 48em) {
+      @content;
+    }
+  }
+
   @if $breakpoint == tab-port {
     @media only screen and (max-width: 57em) {
       @content;
